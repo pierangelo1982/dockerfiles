@@ -15,9 +15,12 @@ docker cp docker-nginx:/etc/nginx/conf.d/default.conf default.conf
 
 
 rimuovi i docker e creane uno nuovo che punti al file default.conf personalizzato copiato in precedenza
-'''
+
+
 sudo docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
-'''
+
+
 docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v /Users/pierangelorizio/Desktop/nginx-test/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx 
+
 
 docker run --name docker-nginx -p 80:80 -v /Users/pierangeloorizio/Desktop/nginx-test/default.conf:/etc/nginx/conf.d/default.conf -d nginx
