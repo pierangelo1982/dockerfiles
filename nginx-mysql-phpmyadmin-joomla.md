@@ -1,8 +1,12 @@
 # NGINX
+'''
 docker run --name docker-nginx -p 80:80 -v /my/local/path/nginx-config/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+'''
 
 # MYSQL
+''
 docker run --name test-mysql -v /my/local/path/test-database/datadir:/var/mysql -e MYSQL_ROOT_PASSWORD=strategylabdb2017 -d mysql
+''
 
 # phpMyAdmin
 docker run --name test-phpmyadmin -d --link test-mysql:db -p 8082:80 phpmyadmin/phpmyadmin
