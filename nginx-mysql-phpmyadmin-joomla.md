@@ -13,16 +13,21 @@ docker run --name test-phpmyadmin -d --link test-mysql:db -p 8082:80 phpmyadmin/
 ```
 
 # JOOMLA
+```
 docker run --name test-joomla --link docker-nginx --link test-mysql:db -e JOOMLA_DB_HOST=db:3306 -e JOOMLA_DB_USER=root -e JOOMLA_DB_PASSWORD=mypassword -v /my/local/path/test-joomla/joomla_www:/var/www/html -p 8081:80 -d joomla
-
+```
 
 
 ## for restart the instance
+```
 docker start dockernginx
-
+```
+```
 docker start strategy-mysql
-
+```
+```
 docker start strategy-phpmyadmin
-
+```
+```
 docker start strategy-lab
-
+```
