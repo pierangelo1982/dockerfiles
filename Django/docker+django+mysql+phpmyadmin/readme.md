@@ -48,9 +48,9 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: alnitek
+      MYSQL_ROOT_PASSWORD: mypassword
       MYSQL_USER: root
-      MYSQL_PASSWORD: alnitek
+      MYSQL_PASSWORD: mypassword
       MYSQL_DATABASE: django-test
   web:
     build: .
@@ -71,3 +71,35 @@ services:
     volumes:
       - /sessions  
 ```
+
+After that go inside this folder from the terminal and launch this command:
+
+```
+docker-compose build
+```
+
+```
+docker-compose up -d
+```
+
+```
+docker-compose run web django-admin.py startproject composeexample .
+
+```
+
+```
+docker-compose up -d
+```
+
+Now chek if all run with the command:
+```
+docker ps
+```
+if all ok you shoud see something as this:
+```
+CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                    NAMES
+46fd01cbe792        djangodocker_web        "python manage.py ..."   28 minutes ago      Up 25 minutes       0.0.0.0:8000->8000/tcp   djangodocker_web_1
+b1f6cacc9cae        mysql                   "docker-entrypoint..."   33 minutes ago      Up 27 minutes       0.0.0.0:3306->3306/tcp   djangodocker_db_1
+bd9d381e6f89        phpmyadmin/phpmyadmin   "/run.sh phpmyadmin"     33 minutes ago      Up 27 minutes       0.0.0.0:8082->80/tcp     djangodocker_phpmyadmin_1
+```
+
