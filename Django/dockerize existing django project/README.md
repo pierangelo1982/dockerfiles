@@ -1,5 +1,5 @@
-### Django
-## clean version
+## Django
+### dockerize and existing django project
 
 Inside you django prject, create this three files: 
 - Dockerfile
