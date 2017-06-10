@@ -2,7 +2,7 @@
 
 # Dockerfile
 
-‘’‘
+```
 FROM php:5-apache
 MAINTAINER pierangelo orizio <pierangelo1982@gmail.com>
 
@@ -23,11 +23,11 @@ RUN apt-get update && \
 
 
 COPY . /var/www/html
-‘‘’
+```
 
 # docker-compose.yml
 
-‘’‘
+```
 version: '2'
 services:
   web:
@@ -60,11 +60,11 @@ services:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: password
 
-‘’‘
+```
 
 # default.conf
 
-‘‘‘
+```
 <VirtualHost *:80>
         # The ServerName directive sets the request scheme, hostname and port that
         # the server uses to identify itself. This is used when creating
@@ -101,4 +101,4 @@ services:
         #Include conf-available/serve-cgi-bin.conf
 </VirtualHost>
 
-’’’
+```
