@@ -46,29 +46,9 @@ services:
       - "8090:80"
     volumes:
       - ~/Scrivania/my-docker/glocalnow-docker/glocalnow:/var/www/html
-    depends_on:
-      - db
-    links:
-      - db
-  db:
-    image: "mysql:5.7"
-    environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=database
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=password
-    ports:
-      - "3306:3306"
-  phpmyadmin:
-    depends_on:
-      - db
-    image: phpmyadmin/phpmyadmin
-    restart: always
-    ports:
-      - 8081:80
-    environment:
-      PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: password
+    external_links:
+      - docker-mysql:db
+    network_mode: bridge
 
 ```
 
