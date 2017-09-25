@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    build: .
+    #command: go run /go/src/github.com/pierangelo1982/myproject/main.go
+    volumes:
+      - .:/go/src/github.com/pierangelo1982/myproject
+    expose:
+      - "8080"
+    ports:
+      - 8080:8080
