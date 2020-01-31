@@ -24,7 +24,7 @@ easy-thumbnails==2.3
 EbookLib==0.15
 enum34==1.1.6
 flake8==3.2.1
-Flask==0.12
+Flask==1.0
 itsdangerous==0.24
 jedi==0.9.0
 Jinja2==2.9.4
