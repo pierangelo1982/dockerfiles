@@ -1,4 +1,4 @@
-Django==1.9.7
+Django==1.11.28
 django-appconf==1.0.1
 django-filer==1.2.5
 django-filter==0.15.0
