@@ -22,7 +22,7 @@ mysql-python
 ndg-httpsclient==0.4.2
 parsedatetime==2.1
 pbr==1.8.0
-Pillow==6.2.0
+Pillow==9.0.1
 psutil==3.4.2
 pyasn1==0.1.9
 PyICU==1.9.2
